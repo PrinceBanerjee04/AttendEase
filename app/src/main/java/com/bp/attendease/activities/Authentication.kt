@@ -12,7 +12,7 @@ class Authentication : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_authentication)
 
-        window.statusBarColor = Color.parseColor("#4FC4D9E6")
+        window.statusBarColor = Color.parseColor("#FFFFFFFF")
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
         }

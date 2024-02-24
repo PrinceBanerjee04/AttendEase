@@ -6,4 +6,9 @@
     <color name="app_blue">#068FFF</color>
     <color name="first_color_gradient">#00E0FF</color>
     <color name="second_color_gradient">#0C41FF</color>
+    <color name="background">#F7F9FD</color>
+
+    <color name="text_color1">#B1AFAF</color>
+    <color name="text_color2">#A2A2A2</color>
+
 </resources>

@@ -2,4 +2,17 @@
     <string name="app_name">AttendEase</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="create_a_class_room_string">Create a class room</string>
+    <string name="enter_details_properly_string">Enter details properly</string>
+    <string name="subject_name_string">Subject Name</string>
+    <string name="subject_code_string">Subject Code</string>
+    <string name="department_string">Department</string>
+    <string name="semester_string">Semester</string>
+    <string name="student_strength_string">Student Strength</string>
+    <string name="pcc_cse501_string">PCC-CSE501</string>
+    <string name="computer_science_and_engineering_string">Computer Science and Engineering</string>
+    <string name="_6_string">6</string>
+    <string name="_64_string">64</string>
+    <string name="create_string">Create</string>
+    <string name="database_management_system_string">Database Management System</string>
 </resources>

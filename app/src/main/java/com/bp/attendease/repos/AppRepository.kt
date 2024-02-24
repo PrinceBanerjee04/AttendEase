@@ -1,4 +1,6 @@
 package com.bp.attendease.repos
 
-class AppRepository {
+import android.app.Application
+
+class AppRepository(private val application: Application) {
 }

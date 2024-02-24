@@ -2,12 +2,17 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/nav_home"
+    app:startDestination="@id/nav_create_classroom"
     android:id="@+id/app_navigation">
 
     <fragment
         android:id="@+id/nav_home"
         android:name="com.bp.attendease.fragments.Home"
         tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_create_classroom"
+        android:name="com.bp.attendease.fragments.CreateClassRoom"
+        tools:layout="@layout/fragment_create_class_room" />
 
 </navigation>

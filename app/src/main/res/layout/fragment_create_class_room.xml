@@ -125,7 +125,7 @@
                 android:layout_marginTop="@dimen/_15sdp"
                 android:layout_marginBottom="@dimen/_5sdp"
                 android:fontFamily="@font/roboto_medium"
-                android:text="Deoartment"
+                android:text="Department"
                 />
 
             <androidx.appcompat.widget.AppCompatEditText

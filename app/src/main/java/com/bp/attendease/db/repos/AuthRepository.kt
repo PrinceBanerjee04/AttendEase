@@ -1,4 +1,4 @@
-package com.bp.attendease.repos
+package com.bp.attendease.db.repos
 
 import android.app.Application
 

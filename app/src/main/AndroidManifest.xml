@@ -13,10 +13,10 @@
         android:theme="@style/Theme.AttendEase"
         tools:targetApi="31">
         <activity
-            android:name="com.bp.attendease.activities.Authentication"
+            android:name="com.bp.attendease.main_files.activities.Authentication"
             android:exported="false" />
         <activity
-            android:name="com.bp.attendease.activities.MainActivity"
+            android:name="com.bp.attendease.main_files.activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

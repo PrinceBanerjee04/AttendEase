@@ -1,4 +1,4 @@
-package com.bp.attendease.activities
+package com.bp.attendease.main_files.activities
 
 import android.graphics.Color
 import android.os.Build
@@ -7,10 +7,10 @@ import android.os.Bundle
 import android.view.View
 import com.example.attendease.R
 
-class MainActivity : AppCompatActivity() {
+class Authentication : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_authentication)
 
         window.statusBarColor = Color.parseColor("#FFFFFFFF")
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context="com.bp.attendease.activities.MainActivity">
+    tools:context="com.bp.attendease.main_files.activities.MainActivity">
 
     <FrameLayout
         android:id="@+id/app_fragment"

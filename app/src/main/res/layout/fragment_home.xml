@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context="com.bp.attendease.fragments.Home">
+    tools:context="com.bp.attendease.main_files.fragments.Home">
 
     <RelativeLayout
         android:id="@+id/appbar_home_teacher"

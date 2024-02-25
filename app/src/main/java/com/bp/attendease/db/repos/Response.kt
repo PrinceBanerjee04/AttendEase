@@ -1,4 +1,4 @@
-package com.bp.attendease.repos
+package com.bp.attendease.db.repos
 
 sealed class Response<T>(val errorMassage: String? = null){
     class Success<T>(): Response<T>()

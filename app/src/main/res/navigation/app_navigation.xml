@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.bp.attendease.fragments.Home"
+        android:name="com.bp.attendease.main_files.fragments.Home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_create_classroom"
-        android:name="com.bp.attendease.fragments.CreateClassRoom"
+        android:name="com.bp.attendease.main_files.fragments.CreateClassRoom"
         tools:layout="@layout/fragment_create_class_room" />
 
 </navigation>

@@ -6,6 +6,7 @@
     android:layout_marginStart="@dimen/_5sdp"
     android:layout_marginEnd="@dimen/_5sdp"
     android:padding="@dimen/_5sdp"
+    android:id="@+id/body_classroom_teacher"
     android:background="@drawable/bg_class_room">
 
     <TextView

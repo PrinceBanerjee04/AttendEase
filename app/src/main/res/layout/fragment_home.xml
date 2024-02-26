@@ -26,29 +26,53 @@
 
     </RelativeLayout>
 
-    <LinearLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout_classroom_teacher"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/appbar_home_teacher"
-        android:orientation="vertical">
+        android:layout_marginTop="@dimen/_50sdp">
 
-        <TextView android:id="@+id/class_rooms"
-            android:textAllCaps="true"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_12sdp"
-            android:layout_marginStart="12sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_black"
-            android:text="Class Rooms"
-            />
-
-        <androidx.recyclerview.widget.RecyclerView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:itemCount="2"
-            tools:listitem="@layout/item_class_room_teacher"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <TextView
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginStart="12sp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_black"
+                android:text="Class Rooms"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_classroom_teacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_class_room_teacher"/>
+
+        </LinearLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <View
+        android:id="@+id/whiteView_classroom_teacher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#A1FFFFFF"
+        android:visibility="gone" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/loader_classroom_teacher"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:src="@drawable/loader" />
 
 </RelativeLayout>

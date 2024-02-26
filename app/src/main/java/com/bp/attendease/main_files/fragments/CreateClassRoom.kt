@@ -105,6 +105,8 @@ class CreateClassRoom : Fragment() {
         createBtn.setOnClickListener {
             isAllRight = true
             if(checkDetails()) {
+                whiteView.visibility = View.VISIBLE
+                loader.visibility = View.VISIBLE
                 if(checkForInternet()) {
                     subjectNameET.isEnabled = false
                     subjectCodeET.isEnabled = false

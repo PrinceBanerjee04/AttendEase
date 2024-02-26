@@ -4,12 +4,20 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.bp.attendease.db.repos.AppRepository
-import com.bp.attendease.db.repos.Response
+import com.bp.attendease.db.Response
+import com.bp.attendease.db.data_class.Classroom
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 class AppViewModel(application: Application) : AndroidViewModel(application) {
     private val appRepository = AppRepository(application)
 
+    private val _classrooms: MutableStateFlow<List<Classroom>> = MutableStateFlow(emptyList())
+    val classrooms: StateFlow<List<Classroom>> = _classrooms
+    
     fun createClassroom(
         teacherUid: String,
         classId: String,
@@ -37,6 +45,15 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
                 is Response.Failure -> {
                     callback(false, "Failed to create classroom: ${result.errorMassage}")
                 }
+            }
+        }
+    }
+
+
+    fun fetchClassRooms(teacherUid: String) {
+        viewModelScope.launch {
+            appRepository.fetchClassRooms(teacherUid).collect { classrooms ->
+                _classrooms.value = classrooms
             }
         }
     }

@@ -1,9 +1,13 @@
 package com.bp.attendease.db.repos
 
 import android.app.Application
+import com.bp.attendease.db.Response
+import com.bp.attendease.db.data_class.Classroom
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.coroutines.TimeoutCancellationException
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withTimeout
 
@@ -34,8 +38,8 @@ class AppRepository(private val application: Application) {
 
         return try {
             withTimeout(10000) {
-                firebaseDB.collection("Classroom").document(teacherUid)
-                    .collection(semester.toString()).document(classId).set(data).await()
+                firebaseDB.collection("Classrooms").document(teacherUid)
+                    .collection("Classrooms").document(classId).set(data).await()
                 Response.Success()
             }
         } catch (e: TimeoutCancellationException) {
@@ -44,6 +48,13 @@ class AppRepository(private val application: Application) {
             Response.Failure(getErrorMassage(e))
         }
 
+    }
+
+    suspend fun fetchClassRooms(teacherUid: String): Flow<List<Classroom>> = flow {
+        val snapshot = firebaseDB.collection("Classrooms").document(teacherUid)
+            .collection("Classrooms").get().await()
+        val classrooms = snapshot.documents.map { it.toObject(Classroom::class.java)!! }
+        emit(classrooms)
     }
 
     private fun getErrorMassage(e: Exception): String {
